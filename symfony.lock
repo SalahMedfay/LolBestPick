@@ -98,6 +98,9 @@
     "swiftmailer/swiftmailer": {
         "version": "v6.1.3"
     },
+    "symfony/asset": {
+        "version": "v4.2.2"
+    },
     "symfony/cache": {
         "version": "v4.2.2"
     },
