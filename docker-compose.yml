@@ -1,0 +1,47 @@
+version: '3'
+services:
+    apache:
+        build: .docker/apache
+        container_name: lolbestpick_apache
+        ports:
+          - 80:80
+        volumes:
+          - .docker/config/vhosts:/etc/apache2/sites-enabled
+          - .:/home/wwwroot/lolbestpick
+        depends_on:
+          - php
+
+    database:
+        image: mysql
+        command: "--default-authentication-plugin=mysql_native_password"
+        container_name: lolbestpick_mysql
+        volumes:
+            - .docker/data/db:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: lolbestpick
+            MYSQL_USER: lolbestpick
+            MYSQL_PASSWORD: lolbestpick
+    php:
+        build: .docker/php
+        container_name: lolbestpick_php
+        volumes:
+          - .:/home/wwwroot/lolbestpick
+        depends_on:
+          - database
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: lolbestpick_phpmyadmin
+        environment:
+          PMA_HOST: database
+          PMA_PORT: 3306
+        ports:
+            - 8080:80
+        links:
+            - database
+
+    elasticsearch:
+        image: elasticsearch:6.5.4
+        container_name: lolbestpick-elasticsearch
+
