@@ -1,4 +1,3 @@
-[![SymfonyInsight](https://insight.symfony.com/projects/c4b397cc-2a33-45aa-80bb-a16729e266bb/big.svg)](https://insight.symfony.com/projects/c4b397cc-2a33-45aa-80bb-a16729e266bb)
 # LolBestPick
 
 ## Setup
@@ -6,10 +5,12 @@
 - Install `docker-compose version 1.21.2`
 - Run `make install`
 
+Next time just run `make up`!
+
 That's it ! Enjoy!
 
 ## Utilities
-- To stop containers, run `make stop`
+- To stop containers, run `make down`
 - To enter `php` container, run `make php`
 - To enter `mysql` container, run `make mysql`
 - To get `PhpMyAdmin`, go to  [`http://localhost:8080`](http://localhost:8080) with `root`/`root` credentials.
