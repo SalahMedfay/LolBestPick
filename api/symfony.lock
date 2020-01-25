@@ -62,6 +62,9 @@
     "doctrine/reflection": {
         "version": "v1.0.0"
     },
+    "dolejska-daniel/riot-api": {
+        "version": "v3.0.11"
+    },
     "friendsofsymfony/rest-bundle": {
         "version": "2.2",
         "recipe": {
@@ -73,6 +76,15 @@
         "files": [
             "config/packages/fos_rest.yaml"
         ]
+    },
+    "guzzlehttp/guzzle": {
+        "version": "6.5.2"
+    },
+    "guzzlehttp/promises": {
+        "version": "v1.3.1"
+    },
+    "guzzlehttp/psr7": {
+        "version": "1.6.1"
     },
     "hoa/compiler": {
         "version": "3.17.08.08"
@@ -136,6 +148,9 @@
             "config/packages/prod/jms_serializer.yaml"
         ]
     },
+    "nette/utils": {
+        "version": "v2.5.4"
+    },
     "nikic/php-parser": {
         "version": "v4.2.0"
     },
@@ -154,8 +169,14 @@
     "psr/container": {
         "version": "1.0.0"
     },
+    "psr/http-message": {
+        "version": "1.0.1"
+    },
     "psr/log": {
         "version": "1.1.0"
+    },
+    "ralouphie/getallheaders": {
+        "version": "3.0.3"
     },
     "symfony/cache": {
         "version": "v4.2.2"
