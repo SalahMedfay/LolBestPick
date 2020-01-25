@@ -5,6 +5,7 @@
         "php": "^7.2.10",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "dolejska-daniel/riot-api": "^3",
         "friendsofsymfony/rest-bundle": "^2.5",
         "jms/serializer-bundle": "^3.5",
         "symfony/console": "4.4.*",
