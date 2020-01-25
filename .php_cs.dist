@@ -11,7 +11,6 @@ $finder = PhpCsFixer\Finder::create()
     ->files()
     ->name('*.php')
     ->in(__DIR__.'/api/src')
-    ->notPath('Kernel.php')
 ;
 
 return PhpCsFixer\Config::create()
