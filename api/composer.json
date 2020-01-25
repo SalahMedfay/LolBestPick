@@ -5,18 +5,19 @@
         "php": "^7.2.10",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "symfony/console": "4.2.*",
-        "symfony/dotenv": "4.2.*",
-        "symfony/flex": "^1.1",
-        "symfony/framework-bundle": "4.2.*",
+        "friendsofsymfony/rest-bundle": "^2.5",
+        "jms/serializer-bundle": "^3.5",
+        "symfony/console": "4.4.*",
+        "symfony/dotenv": "4.4.*",
+        "symfony/flex": "^1.6",
+        "symfony/framework-bundle": "4.4.*",
         "symfony/orm-pack": "^1.0",
-        "symfony/security": "4.2.*",
-        "symfony/yaml": "4.2.*"
+        "symfony/security": "4.4.*",
+        "symfony/yaml": "4.4.*"
     },
     "require-dev": {
         "symfony/maker-bundle": "^1.11",
-        "symfony/web-profiler-bundle": "4.2.*",
-        "symfony/web-server-bundle": "4.2.*"
+        "symfony/web-profiler-bundle": "4.4.*"
     },
     "config": {
         "preferred-install": {
