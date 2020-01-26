@@ -1,0 +1,22 @@
+name: PHP Composer
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate api/composer.json
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest --working-dir=api/
+
+    - name: OSKAR-PHP-CS-Fixer
+      uses: OskarStark/php-cs-fixer-ga@2.15.3
+      with:
+        args: --config=.php_cs.dist --diff --dry-run --allow-risky=yes

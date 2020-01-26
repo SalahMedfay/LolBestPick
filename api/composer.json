@@ -1,4 +1,6 @@
 {
+    "name" : "salahmedfay/lolbestpick",
+    "description": "Best pick helper for League Of Legends ranked games http://www.lolbestpick.com\n",
     "type": "project",
     "license": "proprietary",
     "require": {
