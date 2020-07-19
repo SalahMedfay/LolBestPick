@@ -5,6 +5,8 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: 'fr'
+    riot_api_key: '%env(resolve:RIOT_API_KEY)%'
+    region: 'euw'
 
 services:
     # default configuration for services in *this* file
@@ -26,3 +28,28 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\Service\LeagueApi:
+        arguments:
+            $key: '%riot_api_key%'
+            $region: '%region%'
+
+    App\Manager\ChampionManager:
+        arguments:
+            $repository: '@App\Repository\ChampionRepository'
+
+    App\Manager\GatheringManager:
+        arguments:
+            $repository: '@App\Repository\GatheringRepository'
+
+    App\Manager\MateManager:
+        arguments:
+            $repository: '@App\Repository\MateRepository'
+
+    App\Manager\VsManager:
+        arguments:
+            $repository: '@App\Repository\VsRepository'
+
+    App\Manager\GameManager:
+        arguments:
+            $repository: '@App\Repository\GameRepository'

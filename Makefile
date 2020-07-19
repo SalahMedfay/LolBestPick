@@ -119,3 +119,6 @@ dmm: ## Execute migrations
 dmm:
 	@echo "Executing migrations..."
 	$(COMMAND) "$(CONSOLE) d:m:m -n"
+dmd:
+	@echo "Creating diff migrations..."
+	$(COMMAND) "$(CONSOLE) d:m:diff"
